@@ -18,6 +18,7 @@ wandb/
 slurm-*.out
 slurm/
 slurm_logs/
+experiments/
 
 
 # python
@@ -32,6 +33,7 @@ __pycache__/
 *.sh
 *.json
 *.npy
+*.svg
 
 cache_*/
 

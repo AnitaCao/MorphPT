@@ -187,6 +187,9 @@ def get_args():
     p.add_argument('--lora_alpha', type=int, default=32)
     p.add_argument('--lora_dropout', type=float, default=0.05)
     p.add_argument('--lora_targets', type=str, default="qkv,proj,mlp_fc1,mlp_fc2")
+    p.add_argument('--head_arch', type=str, default='morphpt', choices=['morphpt','scellst'])
+    p.add_argument('--head_hidden', type=str, default='256,256,256')
+    p.add_argument('--head_dropout', type=float, default=0.1)
     p.add_argument('--scales', type=str, default="10.0x", help='Comma-separated scales, e.g. "10.0x" or "2.5x,10.0x"')
     p.add_argument('--fuse', type=str, default="identity", choices=["identity", "gate"])
     p.add_argument('--augment', action='store_true', default=False, help='If flagged, apply vision augmentations at training')
@@ -371,12 +374,15 @@ def main():
         )
         # Adapt regression head explicitly to our multi-task objective to strictly copy MLPMultiHead
         d_embed = model.head[0].in_features if isinstance(model.head, nn.Sequential) else model.head.in_features
-        model.head = nn.Sequential(
-            nn.Linear(d_embed, args.hidden_dim),
-            nn.GELU(),
-            nn.Dropout(0.15),
-            nn.Linear(args.hidden_dim, out_features)
-        )
+        if args.head_arch == 'scellst':
+            _hd=[int(h) for h in args.head_hidden.split(',') if h.strip()]; _d=[d_embed]+_hd
+            _b=[nn.Sequential(nn.Linear(_d[i],_d[i+1]),nn.LeakyReLU(),nn.Dropout(args.head_dropout)) for i in range(len(_d)-1)]
+            _b.append(nn.Sequential(nn.Linear(_d[-1],out_features),nn.Identity())); model.head=nn.Sequential(*_b)
+        else:
+            model.head = nn.Sequential(
+                nn.Linear(d_embed, args.hidden_dim), nn.GELU(), nn.Dropout(0.15),
+                nn.Linear(args.hidden_dim, out_features)
+            )
         model = model.to(device)
         
         param_groups = model.get_param_groups(
