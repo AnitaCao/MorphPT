@@ -29,7 +29,7 @@ around the cell each crop spans), **not** microscope objective magnification:
 the 2.5× crop is a tight view of the nucleus, while the 10× crop covers more
 surrounding tissue.
 
-- 💻 **Code:** _forthcoming_
+- 💻 **Code:** [github.com/AnitaCao/MorphPT](https://github.com/AnitaCao/MorphPT)
 - 🗂️ **CellImageNet benchmark dataset:** _forthcoming_
 - 📄 **Paper:** "A visual foundation model for cell classification" — _citation forthcoming_
 
@@ -69,7 +69,11 @@ maps directly to the cell type with no expert.
 
 ## Usage
 
-Install the MorphPT package (code repository forthcoming), then:
+Install the MorphPT package, then load the model and predict:
+
+```bash
+pip install git+https://github.com/AnitaCao/MorphPT.git
+```
 
 ```python
 from morphpt import MorphPTPredictor
