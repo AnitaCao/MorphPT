@@ -1,0 +1,8 @@
+{
+  "Cancer": 0,
+  "Lymphoid": 1,
+  "Neuroglial": 2,
+  "Stem_Progenitor": 3,
+  "Stromal": 4,
+  "Tissue_Vascular": 5
+}

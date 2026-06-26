@@ -1,0 +1,24 @@
+# Core
+torch>=2.1
+torchvision
+timm>=1.0.19         # DINOv3 ViT-B architecture must be registered
+numpy
+pandas
+pyarrow             # parquet manifests
+pillow              # crop loading
+scipy
+scikit-learn
+tqdm
+
+# Plotting / analysis (figures, notebooks)
+matplotlib
+
+# Weight download from Hugging Face
+huggingface_hub
+
+# Optional: experiment tracking (training only; disable with --wandb_project '')
+# wandb
+
+# Optional: VisiumHD downstream regression (spatial expression)
+# anndata
+# scanpy

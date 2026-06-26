@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "morphpt"
+version = "0.1.0"
+description = "A visual foundation model for cell classification from DAPI nuclei"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "See LICENSE (DINOv3-derivative; weights under the DINOv3 License)" }
+authors = [
+  { name = "Ting Cao" },
+  { name = "Haotian Zhuang" },
+  { name = "Boxuan Zhang" },
+  { name = "Zhiping P. Pang" },
+  { name = "Ruixiang Tang" },
+  { name = "Dongfang Liu" },
+  { name = "Zhicheng Ji" },
+]
+keywords = ["single-cell", "cell-type-classification", "DAPI", "dinov3", "lora", "microscopy"]
+dependencies = [
+  "torch>=2.1",
+  "torchvision",
+  "timm>=1.0.19",          # DINOv3 ViT-B architecture must be registered
+  "numpy",
+  "pandas",
+  "pyarrow",               # parquet manifests
+  "pillow",
+  "scipy",
+  "scikit-learn",
+  "tqdm",
+  "huggingface_hub",       # MorphPTPredictor.from_pretrained
+]
+
+[project.optional-dependencies]
+train = ["wandb"]
+visium = ["anndata", "scanpy"]   # downstream spatial-regression task
+
+[project.urls]
+Repository = "https://github.com/AnitaCao/MorphPT"
+Weights = "https://huggingface.co/jilab/MorphPT"
+
+[tool.setuptools]
+packages = ["morphpt", "models", "data", "trainer"]

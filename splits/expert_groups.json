@@ -1,0 +1,35 @@
+{
+  "experts_needed": {
+    "Cancer": [
+      "Colon cancer cells",
+      "Liver cancer cells",
+      "Lung cancer cells",
+      "Ovary cancer cells",
+      "Pancreas cancer cells",
+      "Skin cancer cells"
+    ],
+    "Neuroglial": [
+      "Astrocytes",
+      "Microglia",
+      "Neurons",
+      "Oligodendrocytes"
+    ],
+    "Lymphoid": [
+      "B cells",
+      "NK cells",
+      "T cells"
+    ],
+    "Tissue_Vascular": [
+      "Endothelial cells",
+      "Epithelial cells",
+      "Fibroblasts",
+      "Myeloid cells",
+      "Pericytes",
+      "Smooth muscle cells"
+    ]
+  },
+  "singletons_no_expert": {
+    "Stromal": "Stromal cells",
+    "Stem_Progenitor": "Stem and progenitor cells"
+  }
+}

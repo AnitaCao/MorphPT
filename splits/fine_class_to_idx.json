@@ -1,0 +1,23 @@
+{
+  "Astrocytes": 0,
+  "B cells": 1,
+  "Colon cancer cells": 2,
+  "Endothelial cells": 3,
+  "Epithelial cells": 4,
+  "Fibroblasts": 5,
+  "Liver cancer cells": 6,
+  "Lung cancer cells": 7,
+  "Microglia": 8,
+  "Myeloid cells": 9,
+  "NK cells": 10,
+  "Neurons": 11,
+  "Oligodendrocytes": 12,
+  "Ovary cancer cells": 13,
+  "Pancreas cancer cells": 14,
+  "Pericytes": 15,
+  "Skin cancer cells": 16,
+  "Smooth muscle cells": 17,
+  "Stem and progenitor cells": 18,
+  "Stromal cells": 19,
+  "T cells": 20
+}

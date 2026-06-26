@@ -1,0 +1,23 @@
+{
+  "Colon cancer cells": "Cancer",
+  "Ovary cancer cells": "Cancer",
+  "Skin cancer cells": "Cancer",
+  "Liver cancer cells": "Cancer",
+  "Lung cancer cells": "Cancer",
+  "Pancreas cancer cells": "Cancer",
+  "Astrocytes": "Neuroglial",
+  "Microglia": "Neuroglial",
+  "Neurons": "Neuroglial",
+  "Oligodendrocytes": "Neuroglial",
+  "Stromal cells": "Stromal",
+  "Stem and progenitor cells": "Stem_Progenitor",
+  "B cells": "Lymphoid",
+  "NK cells": "Lymphoid",
+  "T cells": "Lymphoid",
+  "Endothelial cells": "Tissue_Vascular",
+  "Fibroblasts": "Tissue_Vascular",
+  "Pericytes": "Tissue_Vascular",
+  "Smooth muscle cells": "Tissue_Vascular",
+  "Epithelial cells": "Tissue_Vascular",
+  "Myeloid cells": "Tissue_Vascular"
+}

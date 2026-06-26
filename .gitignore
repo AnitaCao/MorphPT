@@ -1,0 +1,49 @@
+# ── Checkpoints / weights (host on Hugging Face, not git) ──
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# ── Data & derived artifacts ──
+*.parquet
+*.npy
+*.npz
+*.h5
+*.h5ad
+*.tif
+*.tiff
+experiments/
+results/
+checkpoints/
+cache_*/
+prepared/
+data_cache/
+
+# ── Logs / runs ──
+slurm_logs/
+slurm-*.out
+*.log
+wandb/
+runs/
+examples/runs/
+examples/minimal_data/
+examples/_work/
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+
+# ── OS / editor ──
+.DS_Store
+*~
+*.swp
+
+# NOTE: example data is intentionally tracked — small grayscale crops, the
+# manifest, configs, and launch templates are part of the repo:
+#   examples/real_cells/*.png, examples/real_cells/cells.csv,
+#   configs/*.json, slurm/*.sh
