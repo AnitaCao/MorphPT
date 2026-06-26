@@ -1,21 +1,70 @@
 cff-version: 1.2.0
 title: "MorphPT: A visual foundation model for cell classification"
-message: "If you use this software, please cite the accompanying paper."
+message: >-
+  If you use this software or the MorphPT model weights, please cite both this
+  repository and the accompanying paper (see preferred-citation below).
 type: software
 authors:
-  - family-names: "Cao"
-    given-names: "Ting"
-  - family-names: "Zhuang"
-    given-names: "Haotian"
-  - family-names: "Zhang"
-    given-names: "Boxuan"
-  - family-names: "Pang"
+  - family-names: Cao
+    given-names: Ting
+    affiliation: "Department of Imaging Science, Rochester Institute of Technology, Rochester, NY, USA"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Zhuang
+    given-names: Haotian
+    affiliation: "Department of Biostatistics and Bioinformatics, Duke University School of Medicine, Durham, NC, USA"
+  - family-names: Zhang
+    given-names: Boxuan
+    affiliation: "Department of Computer Science, Rutgers University, New Brunswick, NJ, USA"
+  - family-names: Pang
     given-names: "Zhiping P."
-  - family-names: "Tang"
-    given-names: "Ruixiang"
-  - family-names: "Liu"
-    given-names: "Dongfang"
-  - family-names: "Ji"
-    given-names: "Zhicheng"
+    affiliation: "Department of Neuroscience and Cell Biology, Robert Wood Johnson Medical School, Rutgers University, New Brunswick, NJ, USA"
+  - family-names: Tang
+    given-names: Ruixiang
+    affiliation: "Department of Computer Science, Rutgers University, New Brunswick, NJ, USA"
+  - family-names: Liu
+    given-names: Dongfang
+    affiliation: "University Libraries and School of Information Studies, Purdue University, West Lafayette, IN, USA"
+  - family-names: Ji
+    given-names: Zhicheng
+    affiliation: "Department of Biostatistics and Bioinformatics, Duke University School of Medicine, Durham, NC, USA"
 repository-code: "https://github.com/AnitaCao/MorphPT"
-url: "https://huggingface.co/jilab/MorphPT"
+url: "https://github.com/AnitaCao/MorphPT"
+repository-artifact: "https://huggingface.co/jilab/MorphPT"
+abstract: >-
+  MorphPT is a domain-adapted vision model for cell-type classification from
+  DAPI-stained nuclei. Paired 2.5x and 10x crops of each cell are encoded by a
+  LoRA-adapted DINOv3 ViT-B backbone and fused by a ScaleGate module; a coarse
+  router and group-specific experts then predict the fine cell type.
+keywords:
+  - single-cell
+  - cell-type classification
+  - DAPI
+  - nuclear morphology
+  - DINOv3
+  - LoRA
+  - microscopy
+license: MIT
+version: 1.0.0
+# date-released: 2026-01-01      # set to the date of your tagged GitHub release
+# doi: 10.5281/zenodo.XXXXXXX     # add the Zenodo concept DOI after archiving the release
+preferred-citation:
+  type: article
+  title: "A visual foundation model for cell classification"
+  year: 2026
+  authors:
+    - family-names: Cao
+      given-names: Ting
+    - family-names: Zhuang
+      given-names: Haotian
+    - family-names: Zhang
+      given-names: Boxuan
+    - family-names: Pang
+      given-names: "Zhiping P."
+    - family-names: Tang
+      given-names: Ruixiang
+    - family-names: Liu
+      given-names: Dongfang
+    - family-names: Ji
+      given-names: Zhicheng
+  # journal: "TODO — journal name once accepted"
+  # doi: "TODO — article DOI once available"
