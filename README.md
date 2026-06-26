@@ -1,5 +1,8 @@
 # MorphPT
 
+[![🤗 Pretrained weights](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-jilab%2FMorphPT-yellow)](https://huggingface.co/jilab/MorphPT)
+[![License](https://img.shields.io/badge/Code%20License-MIT-blue)](LICENSE)
+
 **MorphPT** is a domain-adapted vision model for **cell-type classification from
 DAPI-stained nuclei**. Each cell is represented by paired multi-scale crops — a
 **2.5×** view (fine nuclear morphology) and a **10×** view (broader tissue
@@ -8,9 +11,9 @@ context) — encoded by a shared DINOv3 ViT-B backbone with LoRA adaptation and 
 morphology-informed groups, and group **experts** resolve fine cell types via
 soft routing.
 
-- 📦 **Pretrained weights:** _Hugging Face — [huggingface.co/jilab/MorphPT](https://huggingface.co/jilab/MorphPT)_
-- 🗂️ **CellImageNet dataset:** _link TBD_
-- 📄 **Paper:** _citation TBD_
+- 📦 **Pretrained weights (Hugging Face):** **https://huggingface.co/jilab/MorphPT**
+- 🗂️ **CellImageNet dataset:** _forthcoming_
+- 📄 **Paper:** _citation forthcoming_
 
 > Code lives here; model weights are hosted on Hugging Face (the checkpoints are
 > too large for git). See [Pretrained weights](#pretrained-weights).
