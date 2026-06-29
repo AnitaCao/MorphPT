@@ -45,7 +45,7 @@ keywords:
   - microscopy
 license: MIT
 version: 1.0.0
-# date-released: 2026-01-01      # set to the date of your tagged GitHub release
+date-released: "2026-06-26"
 # doi: 10.5281/zenodo.XXXXXXX     # add the Zenodo concept DOI after archiving the release
 preferred-citation:
   type: article
