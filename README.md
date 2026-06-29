@@ -1,6 +1,7 @@
 # MorphPT
 
 [![🤗 Pretrained weights](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-jilab%2FMorphPT-yellow)](https://huggingface.co/jilab/MorphPT)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21031925.svg)](https://doi.org/10.5281/zenodo.21031925)
 [![License](https://img.shields.io/badge/Code%20License-MIT-blue)](LICENSE)
 
 **MorphPT** is a domain-adapted vision model for **cell-type classification from

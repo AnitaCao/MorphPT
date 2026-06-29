@@ -46,7 +46,7 @@ keywords:
 license: MIT
 version: 1.0.0
 date-released: "2026-06-26"
-# doi: 10.5281/zenodo.XXXXXXX     # add the Zenodo concept DOI after archiving the release
+doi: 10.5281/zenodo.21031925
 preferred-citation:
   type: article
   title: "A visual foundation model for cell classification"
