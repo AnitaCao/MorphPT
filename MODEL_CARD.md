@@ -2,6 +2,8 @@
 license: other
 license_name: dinov3-license
 license_link: https://ai.meta.com/resources/models-and-libraries/dinov3-license/
+datasets:
+  - jilab/CellImageNet
 library_name: pytorch
 pipeline_tag: image-classification
 tags:
@@ -30,7 +32,7 @@ the 2.5× crop is a tight view of the nucleus, while the 10× crop covers more
 surrounding tissue.
 
 - 💻 **Code:** [github.com/AnitaCao/MorphPT](https://github.com/AnitaCao/MorphPT)
-- 🗂️ **CellImageNet benchmark dataset:** _forthcoming_
+- 🗂️ **CellImageNet benchmark dataset:** [huggingface.co/datasets/jilab/CellImageNet](https://huggingface.co/datasets/jilab/CellImageNet)
 - 📄 **Paper:** "A visual foundation model for cell classification" — _citation forthcoming_
 
 ## Files
@@ -108,7 +110,8 @@ s(y) = Σ_{g in experts} q(g) p_g(y)  +  Σ_{g in passthrough} q(g) 1[y = y_g]
 Trained on a **human-tissue subset of CellImageNet**, subsampled per class to
 mitigate class imbalance. CellImageNet is a large-scale single-cell DAPI image
 database (~10M cells; 28 human + 14 mouse tissues) built from public 10x
-Genomics Xenium data; the full dataset is released separately as a benchmark.
+Genomics Xenium data; the full dataset is released separately as a benchmark at
+https://huggingface.co/datasets/jilab/CellImageNet.
 The split specification used to train this model (seed, per-class subsample
 targets, and label maps) is provided in this repository under `splits/` for
 reproducibility. This checkpoint does **not** cover mouse tissues or cell types

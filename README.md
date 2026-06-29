@@ -13,7 +13,7 @@ morphology-informed groups, and group **experts** resolve fine cell types via
 soft routing.
 
 - 📦 **Pretrained weights (Hugging Face):** **https://huggingface.co/jilab/MorphPT**
-- 🗂️ **CellImageNet dataset:** _forthcoming_
+- 🗂️ **CellImageNet dataset:** [huggingface.co/datasets/jilab/CellImageNet](https://huggingface.co/datasets/jilab/CellImageNet)
 - 📄 **Paper:** _citation forthcoming_
 
 > Code lives here; model weights are hosted on Hugging Face (the checkpoints are
@@ -79,7 +79,7 @@ format, and a fine-tuning walkthrough.
 cell types, across diverse species/tissues/conditions) built from public 10x
 Genomics Xenium data. Each cell has **two paired DAPI crops** — a 2.5× view
 (fine nuclear morphology) and a 10× view (broader tissue context) — and a cell-type label.
-_(Dataset link: TBD.)_
+Available at [huggingface.co/datasets/jilab/CellImageNet](https://huggingface.co/datasets/jilab/CellImageNet).
 
 MorphPT consumes the **crops directly**; you only supply the two views per cell.
 The only input you build is a small **manifest** listing, per cell, the two crop
