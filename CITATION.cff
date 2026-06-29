@@ -8,7 +8,6 @@ authors:
   - family-names: Cao
     given-names: Ting
     affiliation: "Department of Imaging Science, Rochester Institute of Technology, Rochester, NY, USA"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
   - family-names: Zhuang
     given-names: Haotian
     affiliation: "Department of Biostatistics and Bioinformatics, Duke University School of Medicine, Durham, NC, USA"
@@ -44,9 +43,9 @@ keywords:
   - LoRA
   - microscopy
 license: MIT
-version: 1.0.0
+version: "1.0.0"
 date-released: "2026-06-26"
-doi: 10.5281/zenodo.21031925
+doi: "10.5281/zenodo.21031925"
 preferred-citation:
   type: article
   title: "A visual foundation model for cell classification"
@@ -66,5 +65,4 @@ preferred-citation:
       given-names: Dongfang
     - family-names: Ji
       given-names: Zhicheng
-  # journal: "TODO — journal name once accepted"
-  # doi: "TODO — article DOI once available"
+

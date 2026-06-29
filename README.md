@@ -15,6 +15,8 @@ soft routing.
 - 📦 **Pretrained weights (Hugging Face):** **https://huggingface.co/jilab/MorphPT**
 - 🗂️ **CellImageNet dataset:** [huggingface.co/datasets/jilab/CellImageNet](https://huggingface.co/datasets/jilab/CellImageNet)
 - 📄 **Paper:** _citation forthcoming_
+- 🔖 **Archived release used in the manuscript:** https://doi.org/10.5281/zenodo.21031925
+  (all versions: https://doi.org/10.5281/zenodo.20941949)
 
 > Code lives here; model weights are hosted on Hugging Face (the checkpoints are
 > too large for git). See [Pretrained weights](#pretrained-weights).
@@ -113,14 +115,16 @@ img_path_2p5x,img_path_10x,label
 ## Repository layout
 
 ```
+morphpt/        pip package: MorphPTPredictor (from_pretrained inference API)
 models/         backbone, LoRA, ScaleGate, MultiViewClassifier
 data/           dataset (parquet + crops), preprocessing / caching
 trainer/        router / expert / single-view training (DDP)
 scripts/        end-to-end evaluation and analysis
 examples/       minimal runnable vignette (inference + fine-tuning)
 visiumHD/       downstream task: MorphPT router features -> spatial expression regression
+splits/         class maps (coarse/fine) and the train/val/test split manifest
 configs/        configuration
-slurm/          cluster launch templates
+utils/          shared helpers
 ```
 
 ## Training
@@ -150,8 +154,7 @@ python trainer/train_expert.py \
 `--train_dir` takes a manifest (`.csv`/`.parquet`) or a directory of parquet
 shards and reads the crops directly; add `--cache_dir <memmap>` only if you want
 the optional GPU-throughput cache. Multi-GPU runs use `torchrun`/SLURM (rank,
-local rank, world size from the environment); see [`slurm/`](slurm/) for
-templates.
+local rank, world size are read from the environment).
 
 ## Evaluation
 
