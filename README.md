@@ -14,6 +14,7 @@ soft routing.
 
 - 📦 **Pretrained weights (Hugging Face):** **https://huggingface.co/jilab/MorphPT**
 - 🗂️ **CellImageNet dataset:** [huggingface.co/datasets/jilab/CellImageNet](https://huggingface.co/datasets/jilab/CellImageNet)
+- 🤖 **MorphAgent (NL controller):** [github.com/ZBox1005/MorphAgent](https://github.com/ZBox1005/MorphAgent)
 - 📄 **Paper:** _citation forthcoming_
 - 🔖 **Archived release used in the manuscript:** https://doi.org/10.5281/zenodo.21031925
   (all versions: https://doi.org/10.5281/zenodo.20941949)
@@ -185,6 +186,18 @@ that directory for its scripts.
 - `CellImageNet` (the training corpus) is released separately (link above).
 - Cropping/segmentation is out of scope; MorphPT operates on paired 2.5×/10×
   crops you provide.
+
+## Related projects
+
+**MorphAgent** is a natural-language controller that orchestrates cell
+segmentation, MorphPT-based cell-type classification, and tumor–immune spatial
+analysis through an interactive web interface —
+[github.com/ZBox1005/MorphAgent](https://github.com/ZBox1005/MorphAgent) (MIT
+License). MorphAgent trains no models of its own: it delegates cell-type
+prediction to MorphPT and performs planning with a general-purpose LLM accessed
+through a provider API (e.g. OpenAI GPT-4o or Anthropic Claude), so no model
+weights are distributed with it. A versioned archival snapshot will be deposited
+on Zenodo upon publication.
 
 ## Citation
 

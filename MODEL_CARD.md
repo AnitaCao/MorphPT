@@ -33,6 +33,7 @@ surrounding tissue.
 
 - 💻 **Code:** [github.com/AnitaCao/MorphPT](https://github.com/AnitaCao/MorphPT)
 - 🗂️ **CellImageNet benchmark dataset:** [huggingface.co/datasets/jilab/CellImageNet](https://huggingface.co/datasets/jilab/CellImageNet)
+- 🤖 **MorphAgent (NL controller):** [github.com/ZBox1005/MorphAgent](https://github.com/ZBox1005/MorphAgent)
 - 📄 **Paper:** "A visual foundation model for cell classification" — _citation forthcoming_
 
 ## Files
@@ -128,6 +129,18 @@ outside the 21 listed above.
 - Inputs must be correctly framed 2.5× and 10× crops of the same cell. Resizing fixes pixel size, not field of view. Mismatched crop scales may silently degrade predictions.
 - The model was trained on a per-class-subsampled subset of CellImageNet. Rare cell types and out-of-distribution tissues may have weaker performance.
 - Coarse routing is the main error source. Cells near coarse-group boundaries are likely to be less reliable.
+
+## Related projects
+
+**MorphAgent** is a natural-language controller that orchestrates cell
+segmentation, MorphPT-based cell-type classification, and tumor–immune spatial
+analysis through an interactive web interface —
+[github.com/ZBox1005/MorphAgent](https://github.com/ZBox1005/MorphAgent) (MIT
+License). MorphAgent trains no models of its own: it delegates cell-type
+prediction to MorphPT and performs planning with a general-purpose LLM accessed
+through a provider API (e.g. OpenAI GPT-4o or Anthropic Claude), so no model
+weights are distributed with it. A versioned archival snapshot will be deposited
+on Zenodo upon publication.
 
 ## Citation
 
